@@ -5,7 +5,7 @@ router.get("userTest", (req, res)=>{
     console.log(username)
 })
 
-router.post("", (req, res)=>{
+router.post("/userposttest", (req, res)=>{
     const username = req.body.username
     console.log(username)
 })
