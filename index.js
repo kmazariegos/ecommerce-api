@@ -11,6 +11,10 @@ mongoose
 .then(()=>{console.log("DBConnect success")})
 .catch((err)=>{console.log(err)})
 
+app.use(express.json())
+
+app.use("/api/users", userRoute)
+
 app.listen(process.env.PORT || 5000, ()=>{
     console.log("backend server is running");
 })
