@@ -1,15 +1,6 @@
+const User = require('../models/User');
 const router = require('express').Router();
 
-router.get("userTest", (req, res)=>{
-    const username = req.body.username;
-    console.log(username)
-})
-
-router.post("/userposttest", (req, res)=>{
-    const username = req.body.username
-    console.log(username)
-})
-
-
+router.put("/:id", )
 
 module.exports = router
