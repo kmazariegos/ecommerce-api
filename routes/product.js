@@ -1,20 +1,21 @@
 const router = require('express').Router();
 const Product = require('../models/Product');
 const {
-    verifyTokenAndAuthorization
+    verifyTokenAndAuthorization, 
+    verifyTokenAndAdmin
   } = require("./verifyToken");
 
 
 
 //POST
 
-router.post("/", async(req, res)=>{
+router.post("/", verifyTokenAndAdmin , async(req, res)=>{
 
-    
+
 })
 
 
-//PUT
+//UPDATE
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
     if (req.body.password) {
       req.body.password = CryptoJS.AES.encrypt(
